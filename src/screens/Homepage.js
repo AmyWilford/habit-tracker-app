@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   FlatList,
   Alert,
+  Button,
 } from "react-native";
 
 // Import AsyncStorage for local storage of tasklists
@@ -52,9 +53,17 @@ function Homepage() {
     }
   };
 
-  // Function to reset list
+  // Function to clear list
   function clearList() {
     setList([]);
+  }
+
+  function resetList() {
+    let data = [];
+    for (let i = 0; i < list.length; i++) {
+      data.push({ ...list[i], isChecked: false });
+    }
+    setList(data);
   }
   // Function to set check value of item list when clicked and update list value
 
@@ -112,12 +121,24 @@ function Homepage() {
     <View style={styles.HomepageView}>
       <View style={styles.headingView}>
         <Text style={styles.title}>Habit Tracker</Text>
-        <TouchableOpacity
-          style={styles.clearListWrapper}
-          onPress={() => clearList()}
-        >
-          <Text style={styles.clearListText}>clear list</Text>
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            style={styles.clearListWrapper}
+            onPress={() => resetList()}
+          >
+            <Text style={[styles.listSetting, { color: colors.accent }]}>
+              reset list
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.clearListWrapper}
+            onPress={() => clearList()}
+          >
+            <Text style={[styles.listSetting, { color: colors.primary }]}>
+              clear list
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Render TaskCard components for each item on the list */}
@@ -174,17 +195,17 @@ const styles = StyleSheet.create({
   headingView: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
     paddingHorizontal: 20,
+    marginVertical: 15,
   },
   title: {
     ...fonts.title_text,
-    marginVertical: 15,
     textAlign: "center",
   },
-  clearListText: {
-    color: colors.primary,
-    opacity: 0.5,
+  listSetting: {
+    opacity: 0.8,
+    marginVertical: 10,
+    fontWeight: 'bold',
   },
   textInputWrapper: {
     position: "absolute",
