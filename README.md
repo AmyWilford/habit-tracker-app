@@ -29,7 +29,11 @@ This app was build using React Native and Expo.
 This app is currently deployed on Expo. To view the deploted application you must have Expo App on your device.
 
 Scan the QR code to open Habit Tracker using Expo.
-<img src="assets/QR-code.png" width="600"  alt="deployed site" />
+
+
+<img src="assets/QR-code.png" width="300"  alt="deployed site" />
+<br>
+
 OR, [open this link on your device](exp://exp.host/@amywilford/habit-tracker?release-channel=default)
 
 ## Credits
