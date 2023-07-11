@@ -5,8 +5,9 @@
 ## Table of contents
 
 - [Description](#Description)
-- [Technologies](#Technologies)
 - [Usage-Installation](#Usage-Installation)
+
+- [Technologies](#Technologies)
 - [Credits](#credits)
 
 ## Description
@@ -19,20 +20,19 @@ Is your list a daily recurring list? Check each task off as completed, and reset
 
 This app was build using React Native and Expo.
 
-## Technologies
-
-- React Native
-- Expo
-
 ## Usage-Installation
 
 This app is currently deployed on Expo. To view the deploted application you must have Expo App on your device.
 
 Scan the QR code to open Habit Tracker using Expo.
 
-
 <img src="assets/QR-code.png" width="300"  alt="deployed site" />
 <br>
+
+## Technologies
+
+- React Native
+- Expo
 
 ## Credits
 
