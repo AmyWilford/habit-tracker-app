@@ -34,8 +34,6 @@ Scan the QR code to open Habit Tracker using Expo.
 <img src="assets/QR-code.png" width="300"  alt="deployed site" />
 <br>
 
-OR, [open this link on your device](exp://exp.host/@amywilford/habit-tracker?release-channel=default)
-
 ## Credits
 
 This application was designed and developed by Amy Wilford
